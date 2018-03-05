@@ -7,6 +7,7 @@ import {
   ToolbarAndroid,
   Platform
 } from 'react-native';
+import List from './List';
 
 export default class App extends React.Component {
   render() {
@@ -18,6 +19,7 @@ export default class App extends React.Component {
           titleColor="white"
           title="Watering"
         />
+        <List></List>
       </View>
     );
   }
