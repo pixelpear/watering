@@ -19,7 +19,7 @@ export default class App extends React.Component {
           titleColor="white"
           title="Watering"
         />
-        <List></List>
+        <List />
       </View>
     );
   }
@@ -27,8 +27,7 @@ export default class App extends React.Component {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    backgroundColor: '#87c0f2'
+    flex: 1
   },
   statusbar: {
     height: Platform.OS === 'ios' ? 20 : StatusBar.currentHeight

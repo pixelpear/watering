@@ -34,3 +34,6 @@ gradle-app.setting
 
 .DS_Store
 .vscode
+
+ # Android
+android/app/build
