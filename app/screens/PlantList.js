@@ -8,18 +8,21 @@ import {
   Platform
 } from 'react-native';
 import List from './List';
+import FAB from 'react-native-fab';
 
 export default class App extends React.Component {
   render() {
     return (
       <View style={styles.container}>
-        <StatusBar style={styles.statusbar} barStyle="light-content" />
-        <ToolbarAndroid
-          style={styles.toolbar}
-          titleColor="white"
-          title="Watering"
-        />
         <List />
+        <FAB
+          buttonColor="#2d88d8"
+          iconTextColor="#FFFFFF"
+          onClickAction={() => {
+            console.log('FAB pressed');
+          }}
+          visible={true}
+        />
       </View>
     );
   }
@@ -28,13 +31,5 @@ export default class App extends React.Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1
-  },
-  statusbar: {
-    height: Platform.OS === 'ios' ? 20 : StatusBar.currentHeight
-  },
-  toolbar: {
-    width: '100%',
-    height: 56,
-    backgroundColor: '#2d88d8'
   }
 });
